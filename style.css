@@ -1,0 +1,428 @@
+/* === BASE RESET & FONT === */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #121139;
+    color: #fff;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  /* === NAVBAR === */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 2.3em;
+  }
+  
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+  }
+  
+  nav a.active,
+  nav a:hover {
+    color: #ff9800;
+  }
+  
+  /* === HERO SECTION === */
+  .hero {
+    padding: 20px 30px;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    gap: 30px;
+    text-align: left;
+  }
+  
+  .hero-text {
+    flex: 2;
+    max-width: 500px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.4em;
+    margin: 10px 0;
+    line-height: 1.3;
+  }
+  
+  
+  .hero-text p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  .highlight {
+    color: #ff9800;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .hero-buttons a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #ff9800;
+    color: #000;
+  }
+  
+  .btn-primary:hover {
+    background-color: #cb861e;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .hero-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .hero-image img {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* === SEARCH BAR === */
+  .search-bar {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+  }
+  
+  /* === PRODUK HEADER === */
+  .produk-header {
+    text-align: center;
+    margin-top: 70px;
+    max-width: 800px;
+    padding: 0 50px;
+    color: #fff;
+  }
+  
+  .product-section {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .product-section h2,
+  .product-section p {
+    color: #ff9800;
+    margin: 100px 0;
+  }
+  
+  /* === PRODUK GRID SECTION === */
+  .grid-produk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  /* === CARD PRODUK === */
+  .card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    max-width: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  .card h3,
+  .card p {
+    margin: 5px 0;
+    color: #000;
+  }
+  
+  .card a {
+    margin-top: 8px;
+    background: #1e88e5;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+  }
+  
+  .card a:hover {
+    background: #125fa3;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff9800;
+    color: #000;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  /* === DETAIL PRODUK === */
+  .detail-produk {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .detail-produk img {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .detail-produk h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .detail-produk p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .detail-produk a {
+    background-color: #1e88e5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .detail-produk a:hover {
+    background-color: #125fa3;
+  }
+  
+  /* === KONTAK SECTION === */
+  .kontak-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .kontak-container,
+  .kontak-info {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+  }
+  
+  .kontak-container {
+    text-align: center;
+  }
+  
+  .kontak-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .kontak-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+  }
+  
+  .kontak-container input,
+  .kontak-container textarea {
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .kontak-container button {
+    padding: 10px;
+    background-color: #ff9800;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .kontak-container button:hover {
+    background-color: #e68900;
+  }
+  
+  .kontak-info {
+    color: #fff;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  /* === FOOTER === */
+  footer {
+    background: #1a0808;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: white;
+  }
+  
+  /* === WHATSAPP & CART BUTTON === */
+  .whatsapp-button {
+    display: inline-block;
+    margin-top: 8px;
+    background-color: #25D366;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #1cb954;
+  }
+  
+  .cart-button:hover {
+    background-color: #e68900;
+  }
+  
+  /* === ANIMASI === */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* === RESPONSIVE DESIGN === */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .hero-image img {
+      max-width: 200px;
+    }
+  
+    .grid-produk {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  
+    .card img {
+      max-width: 180px;
+    }
+  
+    .detail-produk img {
+      max-width: 250px;
+    }
+  
+    .kontak-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .kontak-container,
+    .kontak-info {
+      max-width: 90%;
+    }
+  }
+  
